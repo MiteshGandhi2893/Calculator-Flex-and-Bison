@@ -1,0 +1,6 @@
+all:assign3FlexandBison     
+
+assign3FlexandBison:	
+	flex calculatorFB.l
+	bison -dv calculatorFB.y
+	gcc calculatorFB.tab.c lex.yy.c -o calc2 
